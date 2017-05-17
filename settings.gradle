@@ -1,0 +1,2 @@
+include ':androidColorPickerPreference'
+include ':discwp'

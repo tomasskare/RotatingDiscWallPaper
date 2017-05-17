@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+		  xmlns:nocrew="http://nocrew.org"
+		  android:title="@string/discwp_settings"
+		  android:key="discwallpaper_settings">
+
+  <PreferenceCategory
+      android:title="@string/pref_cat_basic">
+
+    <org.nocrew.tomas.discwp.SeekBarPreference
+	android:key="pref_number_discs"
+	android:title="@string/pref_number_discs_title"
+	android:defaultValue="20"
+	nocrew:min="1"
+	android:max="100"
+	/>
+
+    <ListPreference
+	android:key="pref_disc_type"
+	android:title="@string/pref_disc_type_title"
+	android:defaultValue="@string/pref_disc_type_default"
+	android:entries="@array/pref_disc_type_entries"
+	android:entryValues="@array/pref_disc_type_entryvalues" />
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+      android:title="@string/pref_cat_color">
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+	android:key="pref_color_bg"
+	android:title="@string/pref_color_bg_title"
+	android:summary="@string/pref_color_bg_summary"
+	android:defaultValue="@color/black"
+	alphaSlider="false"
+	/>
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+	android:key="pref_color_disc"
+	android:title="@string/pref_color_disc_title"
+	android:summary="@string/pref_color_disc_summary"
+	android:defaultValue="@color/darkred"
+	alphaSlider="true"
+	/>
+
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+	android:key="pref_color_disc2"
+	android:title="@string/pref_color_disc2_title"
+	android:summary="@string/pref_color_disc2_summary"
+	android:defaultValue="@color/darkblue"
+	alphaSlider="true"
+	/>
+  </PreferenceCategory>
+
+  <PreferenceCategory
+      android:key="pref_key_cat_light"
+      android:title="@string/pref_cat_light">
+
+    <org.nocrew.tomas.discwp.SeekBarPreference
+	android:key="pref_disc_shininess"
+	android:title="@string/pref_disc_shininess_title"
+	android:defaultValue="50"
+	nocrew:min="0"
+	android:max="100"
+	/>
+
+    <org.nocrew.tomas.discwp.SeekBarPreference
+	android:key="pref_light_brightness"
+	android:title="@string/pref_light_brightness_title"
+	android:defaultValue="50"
+	nocrew:min="0"
+	android:max="100"
+	/>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+      android:title="@string/pref_cat_about">
+
+    <PreferenceScreen
+	android:title="@string/pref_scr_credits">
+
+      <PreferenceCategory
+	  android:title="@string/pref_credits_cat_programming">
+
+	<Preference
+	    android:key="pref_credits_programming"
+	    android:title="@string/pref_credits_programming_title"
+	    android:selectable="false" />
+
+      </PreferenceCategory>
+
+      <PreferenceCategory
+	  android:title="@string/pref_credits_cat_opensource">
+
+	<Preference
+	    android:key="pref_credits_glwallpaper"
+	    android:title="@string/pref_credits_glwallpaper_title"
+	    android:summary="@string/pref_credits_glwallpaper_summary"
+	    android:selectable="false" />
+
+	<Preference
+	    android:key="pref_credits_colorpicker"
+	    android:title="@string/pref_credits_colorpicker_title"
+	    android:summary="@string/pref_credits_colorpicker_summary"
+	    android:selectable="false" />
+
+      </PreferenceCategory>
+
+    </PreferenceScreen>
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

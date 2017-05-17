@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="pref_disc_type_entries">
+    <item>Simple</item>
+    <item>Fancy</item>
+    <item>Fancy HQ</item>
+  </string-array>
+
+  <!-- Don't translate these -->
+  <string-array name="pref_disc_type_entryvalues">
+    <item>simple</item>
+    <item>fancy</item>
+    <item>fancyhq</item>
+  </string-array>
+
+</resources>
